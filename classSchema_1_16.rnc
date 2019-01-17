@@ -1,0 +1,22 @@
+#Root element. 
+start = news 
+news = element news{head, body}
+head = element head{headLine+, image*, byLine, info*, dateLine}
+body = element body{p+ | subhead*}
+
+#You need to add stuff in the elements, 
+#they don't just contain text. Look at the outline. 
+headLine = element headLine{text}
+image = element image{text}
+byLine = element byLine{text}
+info = element info{text}
+dateLine = element dateLine{text}
+subhead = element subhead{text}
+#We know that the element p contains mixed content. 
+p = element p{mixed{person}}
+person = element person{ref, text}
+#Write for "value" the values for which you want 
+#the attribute to reference. 
+ref = attribute ref{"value"}
+
+#This is nowhere near completion, this is just a start. 

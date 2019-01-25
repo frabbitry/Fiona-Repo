@@ -1,0 +1,23 @@
+start = news
+news = element news{head, body}
+head = element head{headLine+, image*, byLine, info*, dateLine}
+#Changed the grouping of the body element so that it can include more than one instance of p or subhead. 
+body = element body{(p | subHead)+}
+subHead = element subHead {text}
+headLine = element headLine{text}
+image = element image {pic, caption}
+byLine = element byLine{mixed{person*}}
+info = element info{text}
+#Added a plus sign so that dateLine can include more than one instance of place or date. 
+#dateLine = element dateLine{(place | date)+}
+dateLine = element dateLine{place? , date}
+date = element date {when, text}
+when = attribute when {xsd:date}
+place = element place{text}
+p = element p {mixed {(person | event)*}}
+event = element event {when, text}
+person = element person {ref, text}
+ref = attribute ref {"#McCandless_B" | "#Noble_J"}
+file = attribute file {xsd:anyURI}
+pic = element pic {file, empty}
+caption = element caption {mixed{person*}}

@@ -1,0 +1,57 @@
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+
+#This is a super, super basic schema that definitely can be added to and revised. It should work to start marking stuff up for now, though. 
+
+#Root element
+start = ulysses 
+
+#Accounting for the fact that dialogue may exist outside of the paragraph. 
+ulysses = element ulysses{(section | chapter | paragraph | said)+}
+section = element section{sectionName, empty}
+sectionName = attribute sectionName{"The Telemachiad" | "The Wanderings of Ulysses" | "The Homecoming"}
+chapter = element chapter{chapterName, empty}
+chapterName = attribute chapterName{text}
+#The paragraph contains information about various references, including literary allusions and locations.
+#There are probably other types of references that we could include, and so this is an element that could be revised.
+#Also looking at the people operating in a paragraph, who is saying things, and what they have said. 
+paragraph = element paragraph{mixed{location* | allusion* | person* | event* | speaker* | said* | reference* | vocab*}}
+
+#We want to link each reference (allusion, person, event, etc.) to the paragraph in which it occurs. 
+#We do that with n. Really, I'm questioning whether this is necessary at all but it's here for now. 
+#n = attribute n{xsd:integer}
+#This is an attribute to encapsulate information about location. I think that this element is currently not finished, because I would like to include information 
+#about lat and long somewhere in this location hierarchy. I'm waiting to include that until we get more information on how best to convert partial street addresses 
+#to geodata. I'm also hoping to number each location with locRef so that we can then tie other references to specific locations. 
+#I'm also wondering about how best to use this element to tag locations that aren't specifically referenced in the text but are alluded to nonetheless. Perhaps an empty 
+#element tag would serve this purpose. 
+location = element location{locRef, mixed{address}}
+locRef = attribute locRef{xsd:integer}
+address = element address{mixed{street}}
+street = element street{text}
+
+#This is an element to encapsulate an allusion, in particularly a literary allusion. We list attributes to connect it to the paragraph it is contained in, the location it
+#is connected to (most likely the location mentioned previously), and a "to" attribute to list the literary author to whom the allusion is referencing. 
+allusion = element allusion{locRef, to, text}
+#I'm including this as text right now, rather than persName, because I'm not sure that every literary work referenced in this piece will be tied to a specific author. 
+#However, this could easily be edited to reference a persName. 
+to = attribute to {text}
+#References to people, probably historical or political figures mentioned explicitly in the text. Tie these in with the paragraph in which they are contained and 
+#the location they are connected to (again, probably the location listed tagged previous to the person reference). 
+person = element person{locRef, mixed{persName}}
+persName = attribute persName{text}
+#References to events, probably historical or political, that are alluded to in the text. 
+event = element event{locRef, mixed{date | location}}
+#I'm trying to encapsulate most of the dates that will be referenced with this attribute. Perhaps there are other datatypes which will better reference the dates referenced in 
+#the text, but I'm using these three for now. 
+date = attribute date{xsd:date | xsd:gYear | xsd:gYearMonth}
+#The following two elements are keeping track of who says what in the text. I'm linking the two with persName, at least for now. 
+speaker = element speaker{mixed{persName, (location | allusion | person | event | said | reference | vocab)*}}
+said = element said{persName, mixed{location* | allusion* | person* | event* | speaker* | said* | reference* | vocab*}}
+#This is an element to encapsulate other, miscellaneous references that probably exist but that I just haven't thought of. Of course, we're linking these 
+#to their parent paragraph and to their relative location. I'm also including a "meaning" attribute as somewhat of a catch-all term for describing what the reference
+#is referring to. 
+reference = element reference{locRef, mixed{meaning}}
+meaning = attribute meaning{text}
+#The vocab element will be used to encapsulate unfamiliar vocabulary terms, whether those are British idioms or Joyce-isms that appear in the text. They are to be 
+#described with a meaning attribute to provide something of a definition for the unfamiliar term or phrase. 
+vocab = element vocab{mixed{meaning}}

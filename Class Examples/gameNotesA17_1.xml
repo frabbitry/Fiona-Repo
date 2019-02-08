@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<log type="releaseNotes">
+    <source target="https://7daystodie.com/alpha-17-1-is-out/"/>
+<title>Alpha 17.1 Is Out!</title>
+Hey Survivalist,
+
+We’ve just released Alpha 17.1 Stable and here are the official releases notes:
+
+To improve stamina players now start with 150 food which is now shown in the hud and menu to communicate you can overeat and not waste food.
+
+When players stamina is between 100 and 150, there are no detrimental stamina effects.
+
+Strength requirements for the Sexual Tyrannosaurus perk have been lowered and we have made the description clear that it does reduce mining stamina costs as well as melee costs. We moved it from the combat perk section to a new section called general strength perks. We’ve reduced the stamina cost of all tools.  We’ve also reduced stone tool stamina penalties.
+
+Water now goes to 150%, and until the water debuff comes on screen at 75% water, you will experience no stamina regeneration penalties.
+
+For builders, we have bolstered XP for harvesting and mining substantially allowing for support roles to keep up with combat and scavenger roles.
+
+If you have problems please visit our Alpha 17.1 Stable Bug Reporting Thread.
+
+We will continue to fix bugs, balance the game, and optimize in 17.2 coming soon.
+
+A17.1 b9
+Added
+
+Entityclasses AIPathCostScale (min/max) and set a variety of values for different AI entities
+Sleeper 20% bonus to AIPathCostScale
+Vehicle manager saves when vehicles are added or removed
+Added Cigars to trader wares
+Added old cash to laundry and nightstands
+AI will do destroy area 60% on a fall after unreachable side path
+Traders now sell glue
+When the PLY option is checked in the F3 debug screen, the cvar window with a new search box will be displayed on your right hand side. Ideal for searching xp related cvars.
+Changed
+
+Optimized catwalk rail metal corner, catwalk rail single, catwalk wedge rail, chair, coffee table
+Separated pathing distance cost from break/jump cost and added per path scaling to allow path variations
+Increased trader rewards
+AI JumpMaxDistance to a random range, set zombie ranges and made heavier zombies jump shorter
+Updated several buff descriptions and journal entries to reflect changes
+Added a beaker to medical quest loot
+Return of the ghosted block preview from A16
+Added acid to lab equipment loot
+Water and food to show the value of current water and food plus the consumed water and food amounts to be applied
+Adjusted max water amounts in progression to reflect the food amounts
+Updated chrysanthemum seed icon.
+Show the water/food as actual value instead of percent.
+Increased dog and wolf health
+Death penalty cannot stack on repeated deaths
+Increased block upgrade speed of nail gun and claw hammer
+A wood pole can be crafted without the table saw
+Updated vehicleWheels icon.
+Increased amount of old cash found in containers and zombie loot.
+ModMeleeStructuralBrace can be installed on bows and has fewer stacking issues
+Increased size of snake colliders
+Increased harvesting / upgrade XP
+Increased AI range to attempt a gap jump
+General Strength Perks have their own category.
+Perks concerning harvesting, looting or carrying things require lower attribute scores to unlock
+Increased the amount of food you can overeat to 50.
+Increased stack count of buff magazines
+Increased stack number of cash
+Allowed 45° rotations on wood/iron bars
+Added support for lumberjacks. Wood now sells for a reasonable amount at traders
+Player sellback rate improved so selling items to traders is more profitable
+Increased drop % of armor mods in loot
+Vehicles can be assembled from parts without a perk
+Glue requires only 1 bone now instead of 2.
+Reduced price of glue it was more expensive than duct tape
+Terrain in prefabs is now integrated into the height map and saved into a temporary file dtm_processed.raw on server side
+Optimized the way imposter prefab are calculated (less network traffic)
+Fixed
+
+Stat Current life does not reset upon death.
+Craft timers not being loaded from saved data correctly
+AI climb flag not set when temp move
+LCB icon is still shown when LCB has been destroyed by another player.
+Bedroll compass/map icon was still showing when destroyed by another player when out of chunk.
+Crafting timer doesn’t advance properly when the chunk is unloaded
+Fuel burn timer showing huge negative value in MP
+Silencer does not actually silence all weapons
+Tuned water message closer to actual in game effect
+Increased quality of items for quest rewards
+Vehicle out of world check using different positions for chunk and terrain tests, so vehicles could get killed and removed Kill
+Zombies prefer to not path glass blocks
+Player backpack can be pushed under the world
+Dupe anything in a container.
+If a server is restarted shortly after placing a vehicle, the vehicle will disappear
+Fixed mismatched reinforced padding icon.
+Any block that can be picked up, can be picked up in a lcb protected area.
+Relogging on activate marker.
+Quests sometimes require moving to corner/center of POI to show Rally Marker.
+Wellness achievement updated to use fortitude
+Relogging on fresh quest will break trigger area.
+Tier5 does not give you a complete quest after requirements are met.
+When blocks are placed where sleepers would spawn, they can turn yellow
+Replaced cntmrandomloothelper in house_old_mansard with random store crate
+Allow harvested decor plants to be scrapped
+Weapon bags do not fall when POI’s fall
+Clothing change can cause major lag spike/fps drop
+Updated mining journal entry
+Tree duping issue when hit by vehicles in LCB
+Holding F is not mentioned on relevant item descriptions
+Open\Close toggle issues with some hatches.
+Strong zombies dropped less cash than weak zombies
+Item is lost if left on the mouse when closing a container.
+Toolbelt items being stuck after use.
+Bleeding buff carries over to respawn
+Sidewalk terrain will not allow placing blocks on it
+Self medicated perk magazine is still in game
+Command smoothworldall only working for 4k maps
+Corrected more burn times
+XBOX controller has not designated button/switch for making air vehicle point down (added controller action 2 to hop)
+Fixed distant water not being flat as a client
+Wrong stats displayed on some armor mods
+Grandpa’s Awesome Sauce is too awesome
+Water is not wet enough. Swimming / rain will now cool you down.
+GunToolNailgun can use trigger group mods
+ModArmorWaterPurifier collides with modArmorHelmetLight
+Terrain decoration like trees and resource rocks would sometimes not be placed
+Known Issues
+
+Continued b240 savegames may have problems with food/water levels when a replenishing buff was active when game is continued in A17.1, character’s death restores functionality
+Some tier 5 dungeons may not complete the clear quests
+In some scenarios double swing may still occur
+Tool damage localization is different than actual value
+RWG: Floating POIs (Minimal occurrence now)
+Trader Jen has a deep voice
+Trader Rekt is nicer than usual
+Charismatic Nature is still in need of improvement, buff works for 5 seconds and 5 seconds it does not
+Scrapping items in crafting queue while re-logging may go lost
+Re-logging when crafting usable items are in the crafting queue may have negative side effects
+Crafting speed bonus and mod slots do not properly apply to workstations after being closed
+Clipping into blocks to see through terrain
+Vultures play their fly animation when dead for clients
+Shotgun driver loses sound on 4×4 after a while
+Workstation tools do not refresh the recipe list when the tools are installed
+Can use torch and flaming arrows as light underwater
+Hitting ESC while generating a map preview will blank screen. Must use CTRL, ALT, DEL to exit game.
+RWG preview tool localization
+Firearms do a duplicate reload animation after reloading while zoomed (locked in zoom)
+Mining helmet light doesn’t show for other players
+Client molotovs thrown down from an edge not working as good as Host
+Hatches don’t always open on the first try
+Player model jumps forward of the player camera when accessing an auto turret inventory
+Turrets will not target self when set to do so
+Player can consume any consumable while mounted in vehicle but will not get the buff/debuff
+Flames don’t move with zombie ragdolls
+Resolution does not always save when >1080p options are available
+Burning shaft mod flame effect can transfer to other items on the toolbelt
+Healing other players with RMB doesn’t work
+Self medicated is not working properly. Not being able to purchase perk is intended.
+Crashes on Mac for a possible workaround, please look at  https://7daystodie.com/forums/showthread.php?101758-Found-workaround-for-constant-crashes-on-Mac&p=914106#post914106
+If connection to server fails, try removing steamnetworking as a disabled function from the serverconfig.xml
+White lines may occur on imposter POIs
+Some Linux users experience problems
+When using REALLY excessive amounts of resources they may vanish in cement mixer’s crafting queue
+Loot abundance setting needs another look
+Placing a new landclaim may cause the icon to disappear
+Some dupes/exploits we are looking into
+This entry was posted in News on 01/18/2019 by rhuenink.
+</log>

@@ -1,0 +1,84 @@
+/* I used an online tool to take the background color of my picture and tell me what the hex code of that color was. I didn't want the picture to look out of place
+ * on the web page.  */
+body{
+    background-color:#F9F5F2;
+}
+/* I wanted to center that image. */
+img.displayed {
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+}
+/* A box to contain several headings. */
+.textbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Used to align headings to the left.  */
+.alignleft{
+    float: left;
+    width:10.33333%;
+    text-align:center;
+    margin: 1mm;
+    padding: 1mm;
+}
+/* Used to align headings to the center.  */
+.aligncenter{
+    float:left;
+    width:10.33333%;
+    text-align:center;
+    margin: 1mm;
+    padding: 1mm;
+}
+/* Used to align headings to the right.  */
+.alignright{
+    float:left;
+    width:10.33333%;
+    text-align:right;
+    margin: 1mm;
+    padding: 1mm;
+}
+/* Heading formats for headings outside of the container definition I made. The margin and padding definitions were somewhat arbitrary. I just tweaked the sizes until 
+ * the page looked fairly okay on the screen.*/
+h1{
+    display: block;
+    text-align: center;
+    margin: 2mm;
+    padding: 0mm;
+}
+
+h2{
+    display: block;
+    text-align: center;
+    margin: 2mm;
+    padding: 2mm;
+}
+h3{
+    display: block;
+    text-align: center;
+    margin: 2mm;
+    padding: 2mm;
+}
+h4{
+    display: block;
+    text-align: center;
+    margin: 2mm;
+    padding: 2mm;
+}
+h5{
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+h6{
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+/* I wanted paragraphs to be aligned to the center.  */
+p{
+    text-align: center;
+}

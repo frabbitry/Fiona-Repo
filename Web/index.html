@@ -1,28 +1,52 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+    <!--frc: I made a web page modeled after the short-lived English literary magazine "Blast", published in the 1910s.
+    No, the web page doesn't look very nice, but it wasn't supposed to.-->
     <head>
-        <title>Her life is measured by coffee spoons</title>
+        <title>I have measured out my life by coffee spoons</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!--Add your <link> element to associate your CSS file here once you have created it.-->
+        <link rel="stylesheet" type="text/css" href="carter_html1_css.css"/>
     </head>
     <body>
-        <!--Code the viewable portion of your page here.-->
-        <img src = "blast5(2).jpg" alt = "The number 5 from the Blast Journal."/>
-        <h1><strong>BLAST </strong></h1>
-        <h5>(from politeness) </h5>
-        <h2>THE RULES OF HTML </h2>
-        <h6>at least the rules regarding headers </h6>
-        <h3>CURSE ITS</h3> <h2>HIERARCHY</h2> <h3>FOR ITS SINS AND INFECTIONS </h3>
-        <h4>DISMAL NATIVE</h4> <h3>DISPLAY:BLOCK</h3> <h4>ELEMENTS </h4>
-        <h3>CAPTURING MY TEXT </h3>
+        <!--I cropped out the number at the top of the page from an actual Blast journal.-->
+        <img class = "displayed" src = "blast5.jpg" alt = "The number 5 from the Blast Journal."/>
+        <div class = "textbox">
+            <h1 class = "alignleft"><strong>BLAST </strong></h1>
+            <h3 class = "aligncenter">(from politeness) </h3>
+            <h1 class = "aligncenter">THE </h1>
+            <h1 class = "aligncenter">RULES </h1>
+            <h1 class = "aligncenter">OF </h1>
+            <h1 class = "aligncenter">HTML </h1>
+            <h6 class = "alignright">at least the rules regarding headers </h6>
+        </div>
+
+        
+        <div class = "textbox">
+            <h3 class = "alignleft">CURSE ITS</h3> 
+            <h2 class = "aligncenter">HIERARCHY</h2> 
+            <h3 class = "alignright">FOR ITS SINS </h3>
+            <h3 class = "alignright"> AND </h3>
+            <h3 class = "alignright">INFECTIONS </h3>
+        </div>
+        <div class = "textbox">
+            <h4 class = "alignleft">DISMAL NATIVE</h4> 
+            <h3 class = "aligncenter">DISPLAY:BLOCK</h3> 
+            <h4 class = "aligncenter">ELEMENTS </h4>
+            <h3 class = "alignright">CAPTURING MY TEXT </h3>
+        </div>
         <p><strong>AND TELLING ME THAT IT SHOULDN'T BE MANIPULATED BEYOND THE HIERARCHICAL RULES OF LARGEST HEADING TO SMALLEST HEADING</strong></p>
-        <p><strong><em>WITH ALL OF THOSE HEADINGS ALIGNED TO THE RIGHT OF THE PAGE, EACH NEW TYPE OF HEADING ON ITS OWN LINE</em></strong></p>
-        <h1>REJECT</h1><h3> THESE </h3><h1>RULES </h1>
-        <h3>FLOAT HEADERS AND </h3> <h2> PUT THEM ON THE SAME LINES </h2>
+        <p><strong><em>WITH ALL OF THOSE HEADINGS ALIGNED TO THE LEFT OF THE PAGE, AND EACH NEW TYPE OF HEADING ON ITS OWN LINE</em></strong></p>
+        <div class = "textbox">
+            <h1 class = "alignleft">REJECT</h1>
+            <h3 class = "aligncenter"> THESE </h3>
+            <h1 class = "alignright">RULES </h1>
+        </div>
+        <h3>MIX HEADERS AND </h3>
+        <h2> PUT THEM ON THE SAME LINES </h2>
         <p><strong>it doesn't matter that you can do the same thing with modifications to text inside paragraph elements; the meaning of the text must be preserved. </strong> </p>
-        <p><strong>WE MUST STRAY TRUE TO THE MEANING OF THE TEXT!</strong> <b>BOLD TAGS</b> are not the same as <strong>STRONG TAGS!</strong> </p>
-        <h1> IS IT A WEBSITE OR IS IT ART? does it have to be pretty? </h1>
-        <p>A website designed after a <i>Blast</i> Journal, made by Fiona Carter.</p>
+        <p><strong>WE MUST STRAY TRUE TO THE MEANING OF THE TEXT!</strong> </p>
+        <h1> WEB PAGES CAN BE ART </h1>
+        <p>A web page designed after those <a href = "https://en.wikipedia.org/wiki/Blast_(magazine)"><i>Blast</i> Journals</a>, made by Fiona Carter, who just wanted to mess around with formatting some headings. </p>
     </body>
 </html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Ulysses SVG</title>
+        <script src="JavaScript2_JS.js"></script>
+        <link rel="stylesheet" type="text/css" href="Carter_Javascript2_CSS.css" />
+    </head>
+    <body>
+        <!--2019-04-15 Fiona Carter: I was trying to make a pie chart showing the percentages of allusions, references, and persons 
+        per section, with the text displaying the information showing on a hover event, but the text isn't cooperating. I can 
+        see that stuff is changing on the top of the web page as I hover over the respective sections of the pie chart, but I can't
+        get the labels to go where they should go. I don't know if finagaling more with CSS would solve this problem.
+        I do believe that two lines of css - using hover - would have produced the exact same result as the Javascript file. -->
+            <div id = "pieChart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
+                    viewBox="0 0 42 42">
+<text>Ulysses References, Persons, and Allusions</text>
+                    <circle cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
+                    <circle cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#d2d3d4" stroke-width="3"></circle>
+                    <g id="telemachiad" onmouseover = "showTextTelemachiad()">
+                        <circle cx="21" cy="21" r="15.91549430918954"
+                            fill="transparent" stroke="#ce4b99" stroke-width="3"
+                            stroke-dasharray="16.0780669144981413 83.9219330855018587"
+                            stroke-dashoffset="25"/>
+                        <text id = "telemachiadDesc">Telemachiad: 16%</text>
+                    </g>
+                    <g id="wanderings" onmouseover = "showTextWanderings()">
+                        <circle cx="21" cy="21" r="15.91549430918954"
+                            fill="transparent" stroke="#b1c94e" stroke-width="3"
+                            stroke-dasharray="26.7657992565055762 73.2342007434944238"
+                            stroke-dashoffset="109"/>
+                        <text id = "wanderingsDesc">Wanderings: 26.7%</text>
+                    </g>
+                    <g id="homecoming" onmouseover = "showTextHomecoming()">
+                        <circle cx="21" cy="21" r="15.91549430918954"
+                            fill="transparent" stroke="#377bbc" stroke-width="3"
+                            stroke-dasharray="57.1561338289962825 42.8438661710037175"
+                            stroke-dashoffset="82"/>
+                        <text id = "homecomingDesc">Homecoming: 57%</text>
+                    </g>
+                </svg>
+            </div>
+
+    </body>
+</html>

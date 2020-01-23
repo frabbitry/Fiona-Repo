@@ -39,7 +39,7 @@
     of the org elements.-->
     <xsl:template match="org">
         <li>
-            <xsl:apply-templates select="orgName"/>
+            <xsl:apply-templates select="orgName[1]"/>
         </li>
     </xsl:template>
     

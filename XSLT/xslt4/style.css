@@ -1,0 +1,53 @@
+body
+{
+    background-color: #2A293E;
+    font-family:'Big Calson',Serif;
+    color:#9F9C99;
+    letter-spacing:0.15em;
+    line-height:200%;
+}
+
+.QuestEvent
+{
+    color:#797B3A;
+}
+
+.QuestItem
+{
+    color:#F3E0BE;
+}
+
+.epithet
+{
+    color:#FFD662;
+}
+
+.location
+{
+    color:#E8B5CE;
+}
+
+.character
+{
+    font-weight:bold;
+}
+
+.faction
+{
+    font-style:italic;
+}
+
+.Aneutral
+{
+    color:#755139;
+}
+
+.Aevil
+{
+    color:#FF6F61;
+}
+
+.Agood
+{
+    color:#264E36;
+}

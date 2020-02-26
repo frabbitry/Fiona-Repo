@@ -37,7 +37,7 @@
     </xsl:template>
     
     <xsl:template match="lg">
-        <xsl:apply-templates select="l"/><br/>
+        <p><xsl:apply-templates select="l"/></p>
     </xsl:template>
 
     

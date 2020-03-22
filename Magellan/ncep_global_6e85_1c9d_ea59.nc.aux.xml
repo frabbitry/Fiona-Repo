@@ -1,0 +1,26 @@
+<PAMDataset>
+  <Subdataset name="ugrd10m">
+    <PAMDataset>
+      <PAMRasterBand band="1">
+        <Metadata>
+          <MDI key="STATISTICS_MAXIMUM">26.568420410156</MDI>
+          <MDI key="STATISTICS_MEAN">-0.35689479333794</MDI>
+          <MDI key="STATISTICS_MINIMUM">-27.201578140259</MDI>
+          <MDI key="STATISTICS_STDDEV">6.0852727533312</MDI>
+        </Metadata>
+      </PAMRasterBand>
+    </PAMDataset>
+  </Subdataset>
+  <Subdataset name="vgrd10m">
+    <PAMDataset>
+      <PAMRasterBand band="1">
+        <Metadata>
+          <MDI key="STATISTICS_MAXIMUM">28.196125030518</MDI>
+          <MDI key="STATISTICS_MEAN">0.046309697988056</MDI>
+          <MDI key="STATISTICS_MINIMUM">-29.913873672485</MDI>
+          <MDI key="STATISTICS_STDDEV">4.7647801495403</MDI>
+        </Metadata>
+      </PAMRasterBand>
+    </PAMDataset>
+  </Subdataset>
+</PAMDataset>

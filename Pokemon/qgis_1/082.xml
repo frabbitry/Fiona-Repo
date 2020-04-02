@@ -10,8 +10,8 @@
     </info>
     
     <locations>
-        <landmark n="Power Plant" lat = "48.668921" lon = "1.106882" >Power Plant<lvl min="33" max="35"> level 33-35</lvl><rate perc="10"> encounter rate: 10%</rate></landmark>
-        <landmark n="Cerulean Cave" lat = "36.047193" lon = "140.167760">Cerulean Cave<lvl min="46" max="46"> level 46</lvl><rate perc="15"> encounter rate: 15%</rate></landmark>
+        <landmark n="Power Plant" lat = "" lon = "" >Power Plant<lvl min="33" max="35"> level 33-35</lvl><rate perc="10"> encounter rate: 10%</rate></landmark>
+        <landmark n="Cerulean Cave" lat = "" lon = "">Cerulean Cave<lvl min="46" max="46"> level 46</lvl><rate perc="15"> encounter rate: 15%</rate></landmark>
     </locations>
     
     </pokemon>
